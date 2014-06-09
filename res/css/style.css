@@ -1,0 +1,115 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body {
+    background: #2D2D2D;
+}
+h2, h3, h4, p {
+    margin: 0px auto;
+    position: relative;
+    font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+    color: #ccc;
+    text-shadow: 2px 2px 3px #111;
+    z-index: 3;
+}
+p {
+    text-align: center;
+    margin-top: 10px;
+}
+h4 {
+    float: right;
+    margin-top: -20px;
+}
+#header {
+    margin: 5px 45px 5px 45px;
+}
+#header .fb-like-box {
+    position: absolute;
+    left: 500px;
+    top: 0px;
+    font-size: 14px;
+    z-index: 3;
+}
+#Content {
+    height: 100%;
+    margin: 0px auto;
+    width: 100%;
+    z-index: 2;
+}
+#Container {
+    position: relative;
+}
+.block {
+    width: 290px;
+    height: 170px;
+    margin: 10px;
+    position: absolute;
+    text-align: center;
+    color: #FFF;
+    z-index: 2;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+.block img {
+    border-color: transparent;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+.block:hover {
+    -moz-box-shadow: 0px 0px 10px #fff;
+    -webkit-box-shadow: 0px 0px 10px #fff;
+    box-shadow: 0px 0px 10px #fff;
+}
+img#bg {
+    /* Stretch background */
+    position:fixed;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    z-index:0;
+}
+#bg_grid {
+    position:fixed; /* This is very important! */
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background: url('../img/grid.png') repeat;
+    /*background-color: rgba(0,0,0,0.5);*/
+    /* Display on top of background */
+    z-index:1;
+}
+#image_description {
+    position:fixed; /* This is very important! */
+    right:-150px;
+    bottom:60px;
+    width:120px;
+    height:38px;
+    background-color:#ddd;
+    filter:alpha(opacity=80);
+    -moz-opacity:0.8;
+    -khtml-opacity: 0.8;
+    opacity: 0.8;
+    z-index:4;
+    padding:5px;
+    font-size:10px;
+    line-height:12px;
+    color:#333333;
+    cursor: pointer;
+    -moz-border-radius-topleft: 8px;
+    -moz-border-radius-bttomleft: 8px;
+    border-top-left-radius: 8px;   
+    border-bottom-left-radius: 8px;
+}
+#image_description a, #image_description a:link, #image_description a:visited, #image_description a:active {
+    text-decoration:none;
+    color:#A62F00;
+}
+#image_description a:hover {
+    text-decoration:underline;
+}
+

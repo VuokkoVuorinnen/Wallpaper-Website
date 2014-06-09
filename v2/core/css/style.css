@@ -1,0 +1,85 @@
+/**
+*
+*   GENERAL LOOK
+*
+**/
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: #111;
+    color: #eeeeee;
+    font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+    font-size: 16px;
+}
+
+#siteWrapper {
+    width: 1000px;
+    margin: 0px auto;
+    padding: 0 10px 10px 10px;
+}
+
+#header {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+#navigation {
+    margin-top: 10px;
+    margin-left: 28px;
+}
+#navigation a, #navigation #search {
+    border-bottom: 0px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    padding: 8px 12px 8px 12px;
+    margin-right: -8px;
+    color: #999;
+    font-size: 16px;
+}
+#navigation .active, #navigation .active:hover, #navigation #search {
+    background-color: #444;
+    color: #fff;
+    font-weight: bold;
+}
+#navigation a:hover {
+    background-color: #222;
+}
+#navigation li, #navigation a {
+    display: inline-block;
+    text-decoration: none;
+}
+#navigation #search {
+    float: right;
+    padding-right: 28px;
+    margin-right: 0px;
+}
+#navigation #searchFld {
+    border-style: none;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    background-color: #000;
+    padding: 5px;
+    width: 200px;
+    color: #eee;
+}
+
+#content {
+    border: 0px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-top-right-radius: 0px;
+    -moz-border-top-right-radius: 0px;
+    background-color: #444;
+    padding: 12px;
+}
+
+.clearfloats {
+    clear: both;
+    height: 1px;
+    width: 1px;
+    display: block;
+}

@@ -1,0 +1,36 @@
+<pre>
+Output formats:
+-------------------------------------------------------------------------------------------
+&format=                        xml | json (default)
+
+
+Request Methods:
+-------------------------------------------------------------------------------------------
+?request=
+
+getImageByID                    Fetches the requested image with all it's info.
+    
+    param:  id [number]         ID of image.  Exmpl: 10
+
+getImages                       Get all existing Images with all their info
+
+tagImage                        Adds Tags to the supplied Image. Creates missing Tags.
+    
+    param:  data [json array]   First element in Array must be image ID followed by
+                                strings of Tags. Exmpl: [1,"Nature","Flapjacks"]
+
+getTags                         Gets all available Tags.
+
+getTagCloud                     Fetches Tags with the amount of images associated with 
+                                them.
+
+getImagesSince                  Get all existing Images with all their info since a certain
+                                image or timestamp.
+
+    param:  id [number]         ID of image.    Exmpl: 234
+    param:  timestamp [number]  Timestamp of the image.     Exmpl:  1329663609
+
+getSwatches                     Get the colour swatches used by the api 
+
+getRandomImage                  Get a random image.
+</pre>

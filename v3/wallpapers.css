@@ -1,0 +1,383 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+}
+body
+{
+	font-family: "Segoe UI", Verdana;
+	font-size: 0.4cm;
+	overflow:hidden;
+}
+#Loading
+{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	position: absolute;
+}
+#Loading>div
+{
+	width: 0;
+	height: 0;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+}
+#Loading>div>div
+{
+	width: 5cm;
+	height: 5cm;
+	margin: -2.5cm;
+	text-align: center;
+}
+#Loading .spinner
+{
+    width: inherit;
+    height: inherit;
+}
+
+#Loading div.spinner div
+{
+	background-color: #FFF;
+}
+#container .virtualItem,
+#container .virtualItem img
+{
+	height: 170px; 
+	width: 290px; 
+	overflow: hidden;
+}
+#container
+{
+	width: 100%;
+	height: 100%;
+	background-color: #2D2D2D;
+}
+body, html
+{
+	height: 100%;
+}
+
+.ascend
+{
+	background-image: url('up.png');
+	background-repeat: no-repeat;
+	background-position: center, right;
+}
+.descend
+{
+	background-image: url('down.png');
+	background-repeat: no-repeat;
+	background-position: center, right;
+}
+#InfoBox .infoBox:hover .zoom,
+#container .virtualItem:hover a.zoom,
+#container .virtualItem:hover a.download,
+#container .virtualItem:hover a.tags
+{
+	opacity: 1;	
+}
+#InfoBox .infoBox .zoom,
+#container .virtualItem a.zoom,
+#container .virtualItem a.download,
+#container .virtualItem a.tags
+{
+	-webkit-transition: background-color 0.5s;
+	-webkit-transition: opacity 0.5s;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(255,255,255,0.75);
+	z-index: 500;
+	padding:0.2cm;
+	border-radius: 0.3cm;
+	margin: 0.3cm;
+	width: 0.6cm;
+	height: 0.6cm;
+	cursor: pointer;
+	opacity: 0;
+	background-repeat: no-repeat;
+	background-position: center center;
+	overflow: hidden;
+	text-indent: 10cm;
+}
+#InfoBox .infoBox .zoom
+{
+	top: 0;
+	bottom: auto;
+}
+#container .virtualItem a.download
+{
+	right: 1.2cm;
+}
+#container .virtualItem a.tags:before
+{
+	content: url('tag.png');
+}
+#container .virtualItem a.tags
+{
+	padding-left:0.1cm;
+	padding-right:0.1cm;
+	width: 0.8cm;
+	text-align: center;
+	text-indent: 0;
+	left: 0;
+}
+#InfoBox .infoBox .zoom:hover,
+#container .virtualItem a.zoom:hover,
+#container .virtualItem a.download:hover,
+#container .virtualItem a.tags:hover
+{
+	background-color: #3079ED;
+	opacity: 1;
+}
+#InfoBox .infoBox .zoom,
+#container .virtualItem .zoom
+{
+	background-image: url('zoom.png');
+}
+#sort
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 0.15cm;
+	background-color: rgba(255,255,255,0.75);	
+	border-bottom-right-radius: 0.25cm;
+	z-index: 1500;
+}
+#sort a
+{
+	display: inline-block;
+	margin: 0.15cm;
+	padding: 0.15cm 0.3cm 0.15cm 20px;
+	background-position: 6px center;
+	background-color: rgba(255,255,255,0.75);
+	border-radius: 0.15cm;
+	cursor: pointer;
+}
+#container .virtualItem .download
+{
+	background-image: url('download.png');
+}
+#zoomBox
+{
+	position: fixed;
+	background-color: rgba(0,0,0,0.75);
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 2000;
+	text-align: center;
+	-webkit-transition: background-color 1s;
+}
+#zoomBox img
+{
+	max-height: 100%;
+	max-width: 100%;
+}
+
+#zoomBox .loading
+{
+	position: absolute;
+	left: 50%;
+	top:  50%;
+}
+#zoomBox .loading>div
+{
+	width: 5cm;
+	height: 5cm;
+	margin: -2.5cm;
+	background-color: rgba(255,255,255,0.75);
+	border-radius: 0.25cm;
+	padding: 0.25cm;
+}
+#zoomBox .loading>div>div
+{
+	width: 5cm;
+	height: 5cm;
+}
+
+#zoomBox .next
+{
+	right: 0.5cm;
+}
+#zoomBox .prev
+{
+	left: 0.5cm;
+}
+#zoomBox .prev,
+#zoomBox .next
+{
+	z-index: 3000;
+	cursor: pointer;
+	width: 2cm;
+	position: absolute;
+	top: 30px;
+	background-color: rgba(255,255,255,0.75);
+	border-radius: 5px;
+	padding: 10px;
+	-webkit-transition: background-color 0.3s;
+	-webkit-transition: color 0.3s;
+}
+#zoomBox .prev:hover,
+#zoomBox .next:hover
+{
+	color: #FFF;
+	background-color: #3079ED;
+}
+#zoomBox .img
+{
+	position: absolute;
+	left: 0;
+	top: 0 !important;
+	width: 100%;
+	top: 100%;
+	text-align: center;
+}
+#controls
+{
+	position: absolute;
+	right: 10px;
+	top: 50px ;
+	z-index: 1750;
+}
+#controls a
+{
+	background-color: rgba(255,255,255,0.75);
+	border-radius: 5px;
+	display: block;
+	margin: 0.25cm;
+	padding: 0.25cm;
+	height: 1cm;
+	width: 1cm;
+	-webkit-transition: background-color 0.3s;
+	background-position: center center;
+	background-repeat: no-repeat;
+	text-indent: -100px;
+	overflow: hidden;
+}
+#controls a.scrollDown
+{
+	background-image: url('scrollDown.png');
+}
+#controls a.scrollUp
+{
+	background-image: url('scrollUp.png');
+}
+#controls a:hover
+{
+	background-color: rgba(28,121,237,0.5);
+}
+#controls a.active
+{
+	background-color: #3079ED;
+}
+#InfoBox
+{
+	position: absolute;
+	left: 50%;
+	top: 0;
+	height: 100%;
+	width: 0;
+}
+#InfoBox>div
+{
+	width: 300px;
+	margin: 16px -150px;
+}
+#InfoBox .infoBox
+{
+	width: inherit;
+	height: inherit;
+	background-color: rgba(0,0,0,0.75);
+	border-radius: 5px;
+	position: absolute;
+	z-index: 1800;
+	-moz-box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+#InfoBox .infoBox .close
+{
+	background-color: rgba(255,255,255,0.75);
+	border-radius: 5px;
+	content: url('close.png');
+	margin: -8px;
+	position:absolute;
+	cursor: pointer;
+}
+#InfoBox .infoBox img
+{
+	margin: 5px;
+	width: 290px;
+	height: 170px;
+}
+#InfoBox .infoBox .tags
+{
+	margin: 0 5px;
+	padding-bottom: 0.2cm;
+}
+#InfoBox .infoBox .tags a
+{
+	display: inline-block;
+	background-color: rgba(255,255,255,0.75);
+	border-radius: 5px;
+	margin: 0.05cm;
+	padding: 0.1cm 0.25cm;
+}
+#InfoBox .infoBox .size
+{
+	color: #FFF;
+	padding: 0.1cm 0.25cm;
+}
+#tags
+{
+	display: none;
+	position: absolute;
+	z-index: 1900;
+	width: 5cm;
+	height: 100%;
+	overflow: auto;
+	left: 0px;
+	width: 100%;
+	height: 5cm;
+	background-color: rgba(255,255,255,0.75);
+	border-radius: 0.15cm;
+	padding: 0.10cm 0.15cm;
+	margin: 0.15cm;
+}
+#searchBox
+{
+	position: relative;
+	display: inline-block;
+}
+#searchBox input
+{
+	background-color: rgba(255,255,255,0.75);
+	border-radius: 0.15cm;
+	padding: 0.10cm 0.15cm;
+	margin: 0.15cm;
+}
+#sort .label
+{
+	display: inline-block;
+	width: 1.5cm;	
+}
+#colours 
+{
+	display: inline-block;
+	margin-top: 0.15cm;
+}
+#colours .colour
+{
+	cursor: pointer;
+	display: inline-block;
+	width: 0.5cm;
+	height: 0.5cm;
+	margin: 0 0.15cm;
+	border: 1px solid black;
+}

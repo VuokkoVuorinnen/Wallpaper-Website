@@ -1,0 +1,8 @@
+<?php
+
+class TagsDB
+{
+
+}
+
+// EOF
